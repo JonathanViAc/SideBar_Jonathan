@@ -1,0 +1,328 @@
+body {
+  overflow-x: hidden;
+}
+
+/* ##################################################################################################################################################*/
+/*#################################################ESTILOS PARA LA PAGINA DE INICIO##################################################################*/
+/* ##################################################################################################################################################*/
+
+/* Elementos */
+.texto {
+  font-family: "Oswald";
+}
+.botonColor {
+  background-color: #5e5e5e;
+  border-color: #5e5e5e;
+  font-weight: 500;
+}
+.botonColor:hover {
+  background-color: white;
+  border-color: white;
+  color: black;
+}
+.botonColor:focus {
+  background-color: white;
+  border-color: white;
+  color: black;
+}
+header.inicio h1,
+header.inicio .h1 {
+  font-size: 2.25rem;
+}
+.logoImagen {
+  width: 10rem;
+  height: 10rem;
+}
+
+/* Ajusta los tamaños de los elementos en pantalla*/
+@media (min-width: 200px) {
+  header.inicio {
+    height: 100vh;
+    min-height: 40rem;
+    padding-top: 3.5rem;
+    padding-bottom: 0;
+  }
+  header.inicio p {
+    font-size: 1.15rem;
+  }
+  header.inicio h1,
+  header.inicio .h1 {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 1900px) {
+  header.inicio h1,
+  header.inicio .h1 {
+    font-size: 3.5rem;
+  }
+}
+/* Estilos para el background de pagina de inicio */
+header.bg-inicio {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 4.5rem);
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.8) 100%
+    ),
+    url("../img/bg-inicio.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+/* ##################################################################################################################################################*/
+/* ##################################################################################################################################################*/
+
+/* ##################################################################################################################################################*/
+/*#################################################ESTILOS PARA LOS FORMULARIOS##################################################################*/
+/* ##################################################################################################################################################*/
+.tamLogo{
+  width: 4rem;
+  height: 4rem;
+}
+
+.cajasTexto{
+  border:none;
+  border-bottom: 1px solid black;
+  font-size: 15px;
+  margin-top: 2%;
+}
+.cajasTexto:focus{
+  outline:none;
+  border-bottom: 3px solid green;
+} 
+.botones{
+  background-color: #278650;
+  border: 0;
+  width: 7rem;
+  height: 2rem;
+  border-radius: 5px;
+  color:white;
+  font-weight: 700;
+  font-family: 'Cairo', sans-serif;
+}
+
+body{
+  background-color: #F5F6FA;  
+}
+
+/* ##################################################################################################################################################*/
+/*#################################################ESTILOS PARA SIDEBAR##################################################################*/
+/* ##################################################################################################################################################*/
+
+
+#sidebar {
+  position: fixed;
+  width: 20%;
+  height: 100%;
+  top: 0;
+  z-index: 2;
+  background-color: #FFFFFF;
+}
+
+.sdf img{
+  width: 60%;
+  height: 60%;
+  cursor: pointer;
+}
+
+a .maceta{
+  display: inline;
+  width: 10%;
+  height: 10%;
+  margin-right: 5%;
+}
+
+#superior{
+  position: relative;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+#inferior{
+  position: absolute;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  top: 80%;
+}
+
+#superior a, #inferior a{
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: x-large;
+  font-weight: bold;
+  color: #05386b;
+  text-decoration: none;
+  padding-top: 10%;
+}
+
+#superior a{
+  text-align: left;
+  padding-left: 10%;
+}
+
+
+ #inferior a{
+  font-weight: normal;
+}
+
+#superior a:hover, #inferior a:hover{
+  opacity: 0.7;
+}
+
+
+/* ##################################################################################################################################################*/
+/*#################################################ESTILOS PARA FORMULARIOS##################################################################*/
+/* ##################################################################################################################################################*/
+/* .formulario {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+} */
+
+.formulario__label {
+	display: block;
+	font-weight: 700;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.formulario__grupo-input {
+	position: relative;
+}
+
+.formulario__input {
+	width: 100%;
+	background: #fff;
+	border: 3px solid transparent;
+	border-radius: 3px;
+	height: 45px;
+	line-height: 45px;
+	padding: 0 40px 0 10px;
+	transition: .3s ease all;
+}
+
+.formulario__input:focus {
+	border: 3px solid #0075FF;
+	outline: none;
+	box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+}
+
+.formulario__input-error {
+	font-size: 12px;
+	margin-bottom: 0;
+	display: none;
+}
+
+.formulario__input-error-activo {
+	display: block;
+}
+
+.formulario__validacion-estado {
+	position: absolute;
+	right: 10px;
+	bottom: 15px;
+	z-index: 100;
+	font-size: 16px;
+	opacity: 0;
+}
+
+.formulario__checkbox {
+	margin-right: 10px;
+}
+
+.formulario__grupo-terminos, 
+.formulario__mensaje,
+.formulario__grupo-btn-enviar {
+	grid-column: span 2;
+}
+
+.formulario__mensaje {
+	height: 45px;
+	line-height: 45px;
+	background: #F66060;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: none;
+}
+
+.formulario__mensaje-activo {
+	display: block;
+}
+
+.formulario__mensaje p {
+	margin: 0;
+}
+
+.formulario__grupo-btn-enviar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.formulario__btn {
+	height: 45px;
+	line-height: 45px;
+	width: 30%;
+	background: #000;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: .1s ease all;
+}
+
+.formulario__btn:hover {
+	box-shadow: 3px 0px 30px rgba(163,163,163, 1);
+}
+
+.formulario__mensaje-exito {
+	font-size: 14px;
+	color: #119200;
+	display: none;
+}
+
+.formulario__mensaje-exito-activo {
+	display: block;
+}
+
+/* ----- -----  Estilos para Validacion ----- ----- */
+.formulario__grupo-correcto .formulario__validacion-estado {
+	color: #1ed12d;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__label {
+	color: #bb2929;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+	color: #bb2929;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input {
+	border: 3px solid #bb2929;
+}
+
+/* 
+/* ----- -----  Mediaqueries ----- -----  
+@media screen and (max-width: 800px) {
+	.formulario {
+		grid-template-columns: 1fr;
+	}
+
+	.formulario__grupo-terminos, 
+	.formulario__mensaje,
+	.formulario__grupo-btn-enviar {
+		grid-column: 1;
+	}
+
+	.formulario__btn {
+		width: 100%;
+	}
+} */
